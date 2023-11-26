@@ -1,0 +1,19 @@
+body {
+    background: linear-gradient(180deg, rgba(0,255,252,1) 0%, rgba(0,123,186,1) 100%); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+#box {
+    text-align: center;
+    background-color: white;
+    width: 40%;
+}
