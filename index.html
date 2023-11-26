@@ -11,9 +11,33 @@
         <div id="box">
             <h1>Todo App</h1>
             <form>
-                <input placeholder="Add your new todo">
-                <button>+</button>
+                <input id="task-input" placeholder="Add your new todo">
+                <button id="input-button">+</button>
             </form>
+
+            <div id="task-list">
+                <div class="task-item">
+                    <p>Buy a new gaming laptop</p>
+                    <button class="delete-button">X</button>
+                </div>
+                <div class="task-item">
+                    <p>Complete a previous task</p>
+                    <button class="delete-button">X</button>
+                </div>
+                <div class="task-item">
+                    <p>Create vieo for YouTube</p>
+                    <button class="delete-button">X</button>
+                </div>
+                <div class="task-item">
+                    <p>Create a new portfolio site</p>
+                    <button class="delete-button">X</button>
+                </div>
+            </div>
+
+            <div id="status-container">
+                <p>You have 4 pending tasks</p>
+                <button id="clear-button">Clear All</button>
+            </div>
         </div>
     </div>
 </body>

@@ -17,3 +17,58 @@ body {
     background-color: white;
     width: 40%;
 }
+
+#task-input {
+    width: 80%;
+    height: 2rem;
+}
+
+#input-button {
+    height: 2.4rem;
+    width: 10%;
+    background-color: rgb(235, 17, 235);
+    color: white;
+    border: none;
+}
+
+#task-list {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+}
+
+.task-item {
+    background-color: #E8E8E8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    width: 80%;
+}
+
+.delete-button {
+    background-color: rgb(225, 30, 30);
+    color: white;
+    height: 2rem;
+    width: 10%;
+    border: none;
+}
+
+#status-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+#clear-button {
+    border: none;
+    background-color: rgb(235, 17, 235);
+    color: white;
+    height: 2rem;
+}
