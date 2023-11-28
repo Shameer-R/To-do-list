@@ -5,6 +5,8 @@ let deleteButtons = document.getElementsByClassName("delete-button");
 const taskInput = document.getElementById("task-input");
 const inputButton = document.getElementById("input-button");
 
+// Create Tasks
+
 function CreateTask(TaskName) {
     const taskItem = document.createElement("div");
     taskItem.className = "task-item";
@@ -24,9 +26,10 @@ function CreateTask(TaskName) {
     taskItem.appendChild(taskDeleteButton);
 }
 
-// Create Tasks
 inputButton.addEventListener("click", function() {
-    CreateTask(taskInput.value);
+    if (taskInput.value != "") {
+        CreateTask(taskInput.value);
+    }
 });
 
 // Delete Tasks
