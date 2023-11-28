@@ -5,6 +5,25 @@ let deleteButtons = document.getElementsByClassName("delete-button");
 const taskInput = document.getElementById("task-input");
 const inputButton = document.getElementById("input-button");
 
+const pendingTasks = document.getElementById("task-pending");
+
+var numberOfTasks = [];
+
+// Update Number of Tasks
+
+function UpdateTasks(task) {
+    if (task != null) {
+        const index = numberOfTasks.indexOf(task)
+        if (index > -1) {
+            numberOfTasks.splice(index, 1); 
+        }
+    }
+
+    pendingTasks.innerText = "You have " + numberOfTasks.length + " pending tasks";
+}
+
+UpdateTasks();
+
 // Create Tasks
 
 function CreateTask(TaskName) {
@@ -16,6 +35,7 @@ function CreateTask(TaskName) {
     taskDeleteButton.innerText = "X";
     taskDeleteButton.addEventListener("click", function() {
         this.parentElement.remove();
+        UpdateTasks(this.parentElement);
     });
     
     const taskText = document.createElement("p");
@@ -24,6 +44,10 @@ function CreateTask(TaskName) {
     taskList.appendChild(taskItem);
     taskItem.appendChild(taskText);
     taskItem.appendChild(taskDeleteButton);
+
+    numberOfTasks.push(taskItem);
+
+    UpdateTasks();
 }
 
 inputButton.addEventListener("click", function() {
@@ -36,5 +60,6 @@ inputButton.addEventListener("click", function() {
 for (var i = 0; i < deleteButtons.length; i++) {
     deleteButtons[i].addEventListener("click", function() {
         this.parentElement.remove();
+        UpdateTasks(this.parentElement);
     });
 }
