@@ -7,6 +7,8 @@ const inputButton = document.getElementById("input-button");
 
 const pendingTasks = document.getElementById("task-pending");
 
+const clearButton = document.getElementById("clear-button");   
+
 var numberOfTasks = [];
 
 // Update Number of Tasks
@@ -63,3 +65,16 @@ for (var i = 0; i < deleteButtons.length; i++) {
         UpdateTasks(this.parentElement);
     });
 }
+
+// Clear all button
+clearButton.addEventListener("click", function() {
+    if (numberOfTasks.length > -1) {
+        for (task in numberOfTasks) {
+            console.log(numberOfTasks[task]);
+            numberOfTasks[task].remove();
+        }
+    
+        numberOfTasks = [];
+        pendingTasks.innerText = "You have 0 pending tasks";
+    }
+});
